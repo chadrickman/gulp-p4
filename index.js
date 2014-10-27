@@ -23,11 +23,6 @@ function optionMapper(options) {
 }
 
 function execP4(p4cmd, options, files, callback) {
-  if (arguments.length === 3 && typeof files === 'function' && Array.isArray(options)) {
-    callback = files;
-    files = options;
-    options = undefined;
-  }
   var cmd = [];
   cmd.push('p4');
   cmd.push(p4cmd);
@@ -43,9 +38,8 @@ module.exports = function (p4cmd, options) {
   }
   var stream = through.obj(function (file, enc, cb) {
     execP4(p4cmd, options, file.history, function (err, stdout, stderr) {
-      if (err) {
-        throw new PluginError(PLUGIN_NAME, err);
-      }
+      if (err) throw new PluginError(PLUGIN_NAME, err);
+      if (stderr) throw new PluginError(PLUGIN_NAME, stderr);
       cb();
     });
   });

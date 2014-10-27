@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wokim/gulp-p4"
+    "url": "https://github.com/wokim/gulp-p4.git"
   },
   "keywords": [
     "perforce",
@@ -16,7 +16,7 @@
     "gulp-p4",
     "p4"
   ],
-  "author": "wokim",
+  "author": "wokim <wonshikkim.kr@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wokim/gulp-p4/issues"
