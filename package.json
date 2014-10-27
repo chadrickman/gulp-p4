@@ -1,0 +1,29 @@
+{
+  "name": "gulp-p4",
+  "version": "0.0.1",
+  "description": "perforce plugin for gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wokim/gulp-p4"
+  },
+  "keywords": [
+    "perforce",
+    "gulp",
+    "gulp-p4",
+    "p4"
+  ],
+  "author": "wokim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wokim/gulp-p4/issues"
+  },
+  "homepage": "https://github.com/wokim/gulp-p4",
+  "dependencies": {
+    "gulp-util": "^3.0.1",
+    "through2": "^0.6.3"
+  }
+}
