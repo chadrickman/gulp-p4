@@ -1,6 +1,6 @@
 {
   "name": "gulp-p4",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "perforce plugin for gulp",
   "main": "index.js",
   "scripts": {

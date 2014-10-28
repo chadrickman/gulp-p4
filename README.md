@@ -12,16 +12,17 @@ npm install gulp-p4 --save-dev
 ## Example
 
 ```js
-var p4 = require('gulp-p4');
+var p4 = require('node-perforce');
+var gulp = require('gulp');
+var gulpP4 = require('gulp-p4');
 
-gulp.task('task', function () {
-  return gulp.src(['files for add'])
-    .pipe(p4('add', {force: false, filetype: 'binary', changelist: 1000))
-    .pipe(gulp.dest('./dist'));
+gulp.task('default', function(callback) {
+  p4.change({change: 'new', description: 'hello world'}, function(err, cl) {
+    if (err) return callback(err);
+    gulp.src('*.js')
+      .pipe(gulpP4('add', {changelist:cl}))
+      .pipe(gulp.dest('./dist'));
+    callback();
+  });
 });
 ```
-
-## Commands
-* add
-* edit
-* revert
