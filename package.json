@@ -1,6 +1,6 @@
 {
   "name": "gulp-p4",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "perforce plugin for gulp",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/wokim/gulp-p4",
   "dependencies": {
     "gulp-util": "^3.0.1",
+    "node-perforce": "^0.0.2",
     "through2": "^0.6.3"
   }
 }
