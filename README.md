@@ -17,7 +17,7 @@ var gulp = require('gulp');
 var gulpP4 = require('gulp-p4');
 
 gulp.task('default', function(callback) {
-  p4.change({change: 'new', description: 'hello world'}, function(err, cl) {
+  p4.changelist.create({description: 'hello world'}, function(err, cl) {
     if (err) return callback(err);
     gulp.src('*.js')
       .pipe(gulpP4('add', {changelist:cl}))
