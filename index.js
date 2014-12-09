@@ -16,7 +16,7 @@ module.exports = function (p4cmd, options) {
     options.files = [file.history];
     p4[p4cmd](options, function(err) {
       if (err) throw new PluginError(PLUGIN_NAME, err);
-      callback();
+      callback(null, file);
     });
   });
 };
